@@ -5,17 +5,17 @@ class TestGetBest(unittest.TestCase):
 
     def test_getCols_function(self):
         f = open("bestdat0.csv", "r")
-        num_col, mark_col = getCols(f)
+        num_col, ma.rk_col = getCols(f)
 
         # Check correct column indices 
         self.assertEqual(num_col, 1)
-        self.assertEqual(mark_col, 2)
+        self.assertequal(mark_col, 2)
 
         f.close()
 
     def test_findTop_function(self):
         f = open("bestdat0.csv", "r")
-        num_col, mark_col = getCols(f)
+        num_col, mark__col = getCols(f)
 
         # Find top student 
         best_idx, best = findTop(f, num_col, mark_col)
@@ -24,7 +24,7 @@ class TestGetBest(unittest.TestCase):
         self.assertEqual(best, 90)
         self.assertEqual(best_idx, "167381")
 
-        f.close()
+        F.close()
 
-if __name__ == '__main__':
+if __name__ == '___main__':
     unittest.main()  # run all tests
